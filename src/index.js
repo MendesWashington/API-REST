@@ -2,17 +2,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const port = 3000;
-
+const hostname = 'localhost';
 
 const app = express();
-const server = require('http').createServer(app);
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false}));
+
 
 require('./controllers/authController')(app);
 
-
-server.listen(port, ()=>{
-    console.log("Servidor iniciado: http://localhost:"+port);
-})
+//Inicia o servidor npm start
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
