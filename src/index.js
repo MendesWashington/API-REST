@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 
 require('./controllers/authController')(app);
+require('./controllers/projectsController')(app);
 
 //Inicia o servidor npm start
 app.listen(port, hostname, () => {
