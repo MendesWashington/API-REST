@@ -7,7 +7,7 @@ API_REST
 - npm install express --save
   - O comando abaixo serve para instalar o framework responsável por trabalhar com o Json na aplicação.
 
--npm install body-parser -- save
+- npm install body-parser -- save
   - A senha está encriptografada.
 
 - Para monitorar as alterações na área de desenvolvimento foi adicionado o nodemon
