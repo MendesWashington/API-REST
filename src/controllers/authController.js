@@ -37,7 +37,7 @@ router.post('/authenticate', async (req, res) =>{
             return res.status(400).send({error: 'User not found!'});
 
         if(!await bcrypt.compare(password, user.password))
-            return res.status(400).send({error: 'Ivalid password!'});
+            return res.status(401).send({error: 'Invalid password!'});
 
         user.password = undefined;
 
