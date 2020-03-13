@@ -12,8 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 
-require('./controllers/authController')(app);
-require('./controllers/projectsController')(app);
+require('./app/controllers/index')(app);
 
 //Inicia o servidor npm start
 app.listen(port, hostname, () => {
